@@ -1,7 +1,7 @@
 ## Shared CSS Library
 
 Reverse proxy with nginx can be used for frontend development.
-Nginx is very simple to setup for this.
+Nginx is very simple to setup for css files substitution.
 
 
 ### How to test
@@ -17,6 +17,12 @@ Nginx is very simple to setup for this.
 
     # make symbolik link to our nginx.conf
     /etc/nginx$ sudo ln -s /path/to/cloned/repo/32_stylish_portal/nginx.conf
+```
+
+Open nginx.conf and change "/path/to/32_stylish_portal/dist/style.css" on yours. Visit urls from "listen" directives in browser and nginx will redirect requests to urls from "proxy_pass" directives and substitute appropriate regexes to  aliases.
+
+
+```
 
     # start nginx
     sudo service nginx start
@@ -26,7 +32,6 @@ Nginx is very simple to setup for this.
 
 ```
 
-Open nginx.conf and change "/path/to/32_stylish_portal/dist/style.css" on yours. Visit urls from "listen" directives in browser and nginx will redirect requests to urls from "proxy_pass" directives and substitute appropriate regexes to  aliases.
 
 ### Project Goals
 
