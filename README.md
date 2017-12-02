@@ -19,8 +19,7 @@ Nginx is very simple to setup for css files substitution.
     /etc/nginx$ sudo ln -s /path/to/cloned/repo/32_stylish_portal/nginx.conf
 ```
 
-Open nginx.conf and change "/path/to/32_stylish_portal/dist/style.css" on yours. Visit urls from "listen" directives in browser and nginx will redirect requests to urls from "proxy_pass" directives and substitute appropriate regexes to  aliases.
-
+Open nginx.conf and change "/path/to/32_stylish_portal/dist/style.css" on yours.
 
 ```
 
@@ -31,6 +30,8 @@ Open nginx.conf and change "/path/to/32_stylish_portal/dist/style.css" on yours.
     sudo nginx -s stop
 
 ```
+
+Visit urls [127.0.0.1:9999](http://127.0.0.1:9999), [127.0.0.1:8888](http://127.0.0.1:8888) from "listen" directives in nginx.conf and nginx will redirect requests to urls from "proxy_pass" directives and substitute appropriate css files matched by regexes by specified our css aliases.
 
 
 ### Project Goals
